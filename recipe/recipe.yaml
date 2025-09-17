@@ -5,7 +5,7 @@ context:
   version: 1.1.0
 
 recipe:
-  name: ${{ name }}
+  name: ${{ name }}-suite
   version: ${{ version }}
 
 source:
@@ -53,25 +53,28 @@ outputs:
       host:
         - oneloop-static
     tests:
-      - script:
-          - test -f $PREFIX/lib/libiregi.a
-          - test -f $PREFIX/include/iregi/binary_tree.mod
-          - test -f $PREFIX/include/iregi/cmatrix_base.mod
-          - test -f $PREFIX/include/iregi/cpave_reduce.mod
-          - test -f $PREFIX/include/iregi/csi_reduce.mod
-          - test -f $PREFIX/include/iregi/cti_reduce.mod
-          - test -f $PREFIX/include/iregi/funlib.mod
-          - test -f $PREFIX/include/iregi/global.mod
-          - test -f $PREFIX/include/iregi/gti_reduce.mod
-          - test -f $PREFIX/include/iregi/kinematics.mod
-          - test -f $PREFIX/include/iregi/linear_algebra.mod
-          - test -f $PREFIX/include/iregi/matrices.mod
-          - test -f $PREFIX/include/iregi/matrix_base.mod
-          - test -f $PREFIX/include/iregi/mis_warp.mod
-          - test -f $PREFIX/include/iregi/pave_reduce.mod
-          - test -f $PREFIX/include/iregi/si_reduce.mod
-          - test -f $PREFIX/include/iregi/special_fun.mod
-          - test -f $PREFIX/include/iregi/ti_reduce.mod
+      - package_contents:
+          strict: true
+          files:
+            - lib/libiregi.a
+          include:
+            - iregi/binary_tree.mod
+            - iregi/cmatrix_base.mod
+            - iregi/cpave_reduce.mod
+            - iregi/csi_reduce.mod
+            - iregi/cti_reduce.mod
+            - iregi/funlib.mod
+            - iregi/global.mod
+            - iregi/gti_reduce.mod
+            - iregi/kinematics.mod
+            - iregi/linear_algebra.mod
+            - iregi/matrices.mod
+            - iregi/matrix_base.mod
+            - iregi/mis_warp.mod
+            - iregi/pave_reduce.mod
+            - iregi/si_reduce.mod
+            - iregi/special_fun.mod
+            - iregi/ti_reduce.mod
 
 about:
   summary: "IREGI: one-loop tensor Integral REduction with General propagator Indices"
