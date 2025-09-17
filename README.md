@@ -24,8 +24,8 @@ The algorithm was proposed by G. Duplancic, B. Nizic
 This implementation for MADLOOP5 in MadGraph5_aMC@NLO was originally
 authored by Hua-Sheng Shao.
 
-About iregi
------------
+About iregi-suite
+-----------------
 
 Home: https://github.com/mg5amcnlo/mg5amcnlo/tree/3.x/vendor/IREGI/src
 
@@ -117,8 +117,8 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-iregi-green.svg)](https://anaconda.org/conda-forge/iregi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/iregi.svg)](https://anaconda.org/conda-forge/iregi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/iregi.svg)](https://anaconda.org/conda-forge/iregi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/iregi.svg)](https://anaconda.org/conda-forge/iregi) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-iregi--static-green.svg)](https://anaconda.org/conda-forge/iregi-static) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/iregi-static.svg)](https://anaconda.org/conda-forge/iregi-static) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/iregi-static.svg)](https://anaconda.org/conda-forge/iregi-static) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/iregi-static.svg)](https://anaconda.org/conda-forge/iregi-static) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-iregi--suite-green.svg)](https://anaconda.org/conda-forge/iregi-suite) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/iregi-suite.svg)](https://anaconda.org/conda-forge/iregi-suite) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/iregi-suite.svg)](https://anaconda.org/conda-forge/iregi-suite) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/iregi-suite.svg)](https://anaconda.org/conda-forge/iregi-suite) |
 
 Installing iregi
 ================
@@ -130,41 +130,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `iregi, iregi-static` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `iregi-static, iregi-suite` can be installed with `conda`:
 
 ```
-conda install iregi iregi-static
-```
-
-or with `mamba`:
-
-```
-mamba install iregi iregi-static
-```
-
-It is possible to list all of the versions of `iregi` available on your platform with `conda`:
-
-```
-conda search iregi --channel conda-forge
+conda install iregi-static iregi-suite
 ```
 
 or with `mamba`:
 
 ```
-mamba search iregi --channel conda-forge
+mamba install iregi-static iregi-suite
+```
+
+It is possible to list all of the versions of `iregi-static` available on your platform with `conda`:
+
+```
+conda search iregi-static --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search iregi-static --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search iregi --channel conda-forge
+mamba repoquery search iregi-static --channel conda-forge
 
-# List packages depending on `iregi`:
-mamba repoquery whoneeds iregi --channel conda-forge
+# List packages depending on `iregi-static`:
+mamba repoquery whoneeds iregi-static --channel conda-forge
 
-# List dependencies of `iregi`:
-mamba repoquery depends iregi --channel conda-forge
+# List dependencies of `iregi-static`:
+mamba repoquery depends iregi-static --channel conda-forge
 ```
 
 
